@@ -24,14 +24,29 @@ const fetchGalleryInfo = ()=>{
   });
 };
 
+const addLikes = (numberLike)=>{
+  axios({
+    method: 'PUT',
+    url: `/gallery/like/${numberLike}`
+  }).then ((response)=>{
+    console.log('in the PUT', response);
+    fetchGalleryInfo();
+  }).catch((err)=>{
+    console.log('In PUT error',err);
+  });
+};
+
 
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <GalleryList galleryList={galleryList}/>
-        {/* <GalleryItem/> */}
+        <GalleryList 
+        galleryList={galleryList}
+        addLikes={addLikes}
+        />
+       
 
       </div>
     );

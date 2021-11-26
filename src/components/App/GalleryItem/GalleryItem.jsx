@@ -1,12 +1,18 @@
 import React, {useState} from 'react';
 
-function GalleryItem({gallery}){
+function GalleryItem({ gallery, addLikes}){
 const [showImage, setShowImage] = useState (true)
 
-const imageSwitch = ()=>{
-    setShowImage(!showImage)
+const likeClicks = () =>{
+    addLikes(gallery.id)
 }
 
+const imageSwitch = ()=>{
+    //The ! is for the showImage is either true or false when switching back and forth.
+    setShowImage(!showImage)
+}
+//function that showsImage or the image description
+//onClick
 const displayImage = ()=>{
     if (showImage){
         return <img
@@ -15,17 +21,22 @@ const displayImage = ()=>{
             src={gallery.path}
             />
     }else {
-        return <p onClick={imageSwitch}>
-                  {gallery.description}
-               </p>
+        return <div
+            onClick={imageSwitch}>
+            {gallery.description}
+            </div>
     }
 }
 
 return(
 <>
-    <div>
+    
+        <div>
         {displayImage()}
-    </div>
+        </div>
+         <button onClick={likeClicks}>💜 it!</button>
+         <div>{gallery.likes}  Clicks for this picture!</div>
+   
 </>
 )
 };
