@@ -4,7 +4,7 @@ function GalleryList({ galleryList, addLikes}){
         return(
         <div> 
             <p>Gallery goes here</p>
-            <p>
+            <>
                 {galleryList.map((gallery) =>{
                     return <GalleryItem 
                     key = {gallery.id}
@@ -14,7 +14,7 @@ function GalleryList({ galleryList, addLikes}){
                })}
                
 
-            </p>
+            </>
         </div>
         )
 
