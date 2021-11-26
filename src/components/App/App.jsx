@@ -7,7 +7,7 @@ import GalleryItem from './GalleryItem/GalleryItem';
 
 
 function App() {
-const [galleryList, setGalleryList] = useState ();
+const [galleryList, setGalleryList] = useState ([]);
 useEffect(()=>{
   fetchGalleryInfo();
 }, []);
@@ -30,7 +30,7 @@ const fetchGalleryInfo = ()=>{
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <GalleryList/>
+        <GalleryList galleryList={galleryList}/>
         {/* <GalleryItem/> */}
 
       </div>
