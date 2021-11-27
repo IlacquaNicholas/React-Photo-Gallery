@@ -10,6 +10,7 @@ const likeClicks = () =>{
 
 const imageSwitch = ()=>{
     //The ! is for the showImage is either true or false when switching back and forth.
+    //Calling the setShowImage because we will need to set the state to change it. (Please correct me if I'm wrong here)
     setShowImage(!showImage)
 }
 //function that showsImage or the image description
