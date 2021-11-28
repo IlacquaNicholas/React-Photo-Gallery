@@ -1,14 +1,28 @@
 .picture-lining{
     display: inline-block;
     margin: 100px;
+    
+}
+
+.img-size{
+   border-radius: 15%; 
+    
 }
 
 .font{
    font-family: fantasy;
    font-style: bold;
-   font-size: 15px;
+   font-size: 16px;
+   color: white;
 }
 .Clicks-text{
     font-size: 20px;
-    font-family:fantasy
+    font-family:fantasy;
+    color:white;
+}
+.button{
+    border-radius: 15px;
+    background-color: white;
+    font-size: 20px;
+   
 }

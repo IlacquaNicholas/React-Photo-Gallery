@@ -13,3 +13,10 @@
   font-size: 1.5em;
 }
 
+body{
+  border: 2px solid black;
+  padding: 25px;
+  background: url(https://media.istockphoto.com/vectors/empty-studio-room-show-booth-for-designers-with-spotlight-on-black-vector-id1084786776?k=20&m=1084786776&s=612x612&w=0&h=XQl--CmuM_fR6oDm_R46Fwwr0AqMLKLpq9kfYNDTbRg=);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
